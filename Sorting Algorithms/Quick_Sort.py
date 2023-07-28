@@ -16,8 +16,3 @@ def partition(array, leftmost, rightmost):
     array[rightmost], array[i+1] = array[i+1], array[rightmost]
 
     return i + 1
-
-
-data = [8, 7, 2, 1, 0, 9, 6]
-quickSort(data, 0, len(data)-1)
-print(data)
