@@ -1,5 +1,5 @@
 class CircularQueue():
-    def __init__(self):
+    def __init__(self, k):
         self.k = k
         self.queue = [None] * k
         self.head = self.tail = -1
@@ -11,7 +11,7 @@ class CircularQueue():
         elif self.head == -1:
             self.head = 0
             self.tail = 0
-            self.queue[slef.tail] = val
+            self.queue[self.tail] = val
         else:
             self.tail = (self.tail + 1) % self.k
             self.queue[self.tail] = val
@@ -30,4 +30,17 @@ class CircularQueue():
             self.head = (self.head + 1) % self.k
             return val
 
-            
+    def printCQueue(self):
+            if(self.head == -1):
+                print("No element in the circular queue")
+
+            elif (self.tail >= self.head):
+                for i in range(self.head, self.tail + 1):
+                    print(self.queue[i], end=" ")
+                print()
+            else:
+                for i in range(self.head, self.k):
+                    print(self.queue[i], end=" ")
+                for i in range(0, self.tail + 1):
+                    print(self.queue[i], end=" ")
+                print()
