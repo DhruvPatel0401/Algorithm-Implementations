@@ -8,13 +8,12 @@ class Stack:
         return len(self.stack) == 0
 
     #Adding items into the stack
-    def push(self, stack, item):
+    def push(self, item):
         self.stack.append(item)
 
     #Removing an element from top of stack
-    def pop(self, stack):
+    def pop(self):
         if self.stack:
             return self.stack.pop()
         else:
             return "Stack is empty"
-
