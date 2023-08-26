@@ -4,7 +4,7 @@ class Stack:
         self.stack = []
 
     #Checking if stack is empty
-    def check_empty(self, stack):
+    def check_empty(self):
         return len(self.stack) == 0
 
     #Adding items into the stack
@@ -17,3 +17,6 @@ class Stack:
             return self.stack.pop()
         else:
             return "Stack is empty"
+    
+    def print_stack(self):
+        return self.stack
