@@ -20,6 +20,6 @@ def postorder(root):
     if root:
         postorder(root.left)
         postorder(root.right)
-        print(print(root.val) + "->", end=" ")
+        print(str(root.val) + "->", end=" ")
 
         
