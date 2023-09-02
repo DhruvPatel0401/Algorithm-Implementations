@@ -21,3 +21,5 @@ def postorder(root):
         postorder(root.left)
         postorder(root.right)
         print(str(root.val) + "->", end=" ")
+
+        
